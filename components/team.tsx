@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "motion/react";
+
 export default function Team() {
   const teamMembers = [
     {
@@ -34,7 +37,12 @@ export default function Team() {
   return (
     <section id="team" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ amount: 0.4 }}>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Meet Our Team
           </h2>
@@ -43,11 +51,26 @@ export default function Team() {
             goals. We have a 14 executive team and 120 volunteers across the
             country.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.3 }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } },
+          }}>
           {teamMembers.map((member, idx) => (
-            <div key={idx + 1} className="text-center group">
+            <motion.div
+              key={idx + 1}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="text-center group">
               <div className="relative mb-6">
                 <img
                   src={member.image}
@@ -61,11 +84,16 @@ export default function Team() {
               </h3>
               <p className="text-green-600 font-medium mb-3">{member.role}</p>
               <p className="text-gray-600 text-sm">{member.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="mt-16 bg-gray-50 rounded-2xl p-8">
+        <motion.div
+          className="mt-16 bg-gray-50 rounded-2xl p-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          viewport={{ amount: 0.3 }}>
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Join Our Team
@@ -93,7 +121,7 @@ export default function Team() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
