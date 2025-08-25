@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "@/app/assets/boa-wo-nua.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
             <div className="w-15">
               <Image
@@ -38,16 +39,15 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Desktop navigation */}
           <nav className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="text-gray-700 hover:text-ngo-green px-3 py-2 rounded-md text-sm font-medium transition-colors">
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </nav>
@@ -73,7 +73,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
