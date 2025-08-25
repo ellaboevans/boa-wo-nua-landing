@@ -1,22 +1,71 @@
+"use client";
+
 import { Eye, Heart, Target } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function About() {
+  const data = [
+    {
+      Icon: Eye,
+      title: "Our Vision",
+      text: "To create a world where every individual has access to quality education, tools, and resources to achieve their full potential.",
+    },
+    {
+      Icon: Target,
+      title: "Our Mission",
+      text: "Impacting Tomorrow's Leaders - We aim to provide innovative and impactful programs that empower individuals to become changemakers in their communities.",
+    },
+    {
+      Icon: Heart,
+      title: "Our Values",
+      text: "Empowerment, Accountability, Integrity, Fairness, Trustworthiness, Innovation, Collaboration, and Respect for people and cultures.",
+    },
+  ];
+
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <motion.div
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.6, staggerChildren: 0.2 },
+            },
+          }}>
+          <motion.h2
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             About BOA WO NUA Initiative
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-600 max-w-3xl mx-auto">
             Founded on the principle of empowering tomorrow's leaders, we are
             dedicated to creating positive change through education, skill
             development, and community engagement.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
             <p className="text-gray-600 mb-4">
               In 2021, <strong>Prince Dormenyo</strong> received life-changing
@@ -42,53 +91,47 @@ export default function About() {
               2022, he shared a bold idea with his friends: to organize a
               tutorial specifically for first-year students.
             </p>
-          </div>
-          <div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}>
             <img
               src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
               alt="Students in classroom"
               className="rounded-2xl shadow-lg w-full h-[400px] object-cover"
             />
-          </div>
+          </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="text-center p-8 bg-green-600/10 rounded-xl">
-            <div className="bg-white p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-              <Eye className="h-8 w-8 text-green-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Vision</h3>
-            <p className="text-gray-600">
-              To create a world where every individual has access to quality
-              education, tools, and resources to achieve their full potential.
-            </p>
-          </div>
-
-          <div className="text-center p-8 bg-green-600/10 rounded-xl">
-            <div className="bg-white p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-              <Target className="h-8 w-8 text-green-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              Our Mission
-            </h3>
-            <p className="text-gray-600">
-              Impacting Tomorrow's Leaders - We aim to provide innovative and
-              impactful programs that empower individuals to become changemakers
-              in their communities.
-            </p>
-          </div>
-
-          <div className="text-center p-8 bg-green-600/10 rounded-xl">
-            <div className="bg-white p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-              <Heart className="h-8 w-8 text-green-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Values</h3>
-            <p className="text-gray-600">
-              Empowerment, Accountability, Integrity, Fairness, Trustworthiness,
-              Innovation, Collaboration, and Respect for people and cultures.
-            </p>
-          </div>
-        </div>
+        <motion.div
+          className="grid md:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.25 } },
+          }}>
+          {data.map(({ Icon, title, text }, i) => (
+            <motion.div
+              key={i}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="text-center p-8 bg-green-600/10 rounded-xl">
+              <div className="bg-white p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                <Icon className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+              <p className="text-gray-600">{text}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
