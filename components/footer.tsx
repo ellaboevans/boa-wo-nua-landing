@@ -54,28 +54,28 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-ngo-green transition-colors">
+                  className="hover:text-green-600 transition-colors">
                   About Us
                 </a>
               </li>
               <li>
                 <a
                   href="#work"
-                  className="hover:text-ngo-green transition-colors">
+                  className="hover:text-green-600 transition-colors">
                   Our Programs
                 </a>
               </li>
               <li>
                 <a
                   href="#team"
-                  className="hover:text-ngo-green transition-colors">
+                  className="hover:text-green-600 transition-colors">
                   Our Team
                 </a>
               </li>
               <li>
                 <a
                   href="#contact"
-                  className="hover:text-ngo-green transition-colors">
+                  className="hover:text-green-600 transition-colors">
                   Contact
                 </a>
               </li>
