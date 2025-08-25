@@ -1,18 +1,12 @@
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Phone,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import Link from "next/link";
 
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
             <h3 className="text-xl font-bold mb-4">BOA WO NUA INITIATIVE</h3>
@@ -21,25 +15,35 @@ export default function Footer() {
               making a positive impact to create a brighter future for all.
             </p>
             <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-300 hover:text-ngo-green transition-colors">
-                <Facebook className="h-5 w-5" />
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <Icon
+                  icon={"iconoir:facebook"}
+                  className="hover:text-accent size-6 transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-80"
+                />
               </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:text-ngo-green transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <Icon
+                  icon={"proicons:x-twitter"}
+                  className="hover:text-accent size-6 transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-80"
+                />
               </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:text-ngo-green transition-colors">
-                <Instagram className="h-5 w-5" />
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <Icon
+                  icon={"proicons:instagram"}
+                  className="hover:text-accent size-6 transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-80"
+                />
               </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:text-ngo-green transition-colors">
-                <Linkedin className="h-5 w-5" />
+              <Link href="#" target="_blank" rel="noopener noreferrer">
+                <Icon
+                  icon={"jam:linkedin-square"}
+                  className="hover:text-accent size-6 transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-80"
+                />
+              </Link>
+              <a href="#">
+                <Icon
+                  icon={"tabler:brand-tiktok"}
+                  className="hover:text-accent size-6 transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-80"
+                />
               </a>
             </div>
           </div>
