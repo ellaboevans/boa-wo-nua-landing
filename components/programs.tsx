@@ -88,7 +88,7 @@ export default function Programs() {
           }}>
           {programs.map((program, idx) => (
             <motion.div
-              key={idx}
+              key={idx + 1}
               variants={{
                 hidden: { opacity: 0, y: 40 },
                 visible: { opacity: 1, y: 0 },
