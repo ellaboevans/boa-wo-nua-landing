@@ -21,7 +21,9 @@ export default function Header() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
-          <div className="flex items-center">
+          <Link
+            href={"#home"}
+            className="flex hover:cursor-pointer items-center">
             <div className="w-15">
               <Image
                 src={Logo}
@@ -37,7 +39,7 @@ export default function Header() {
                 Impacting Tomorrow's Leaders
               </p>
             </div>
-          </div>
+          </Link>
 
           <nav className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -45,7 +47,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-ngo-green px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                  className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                   {item.name}
                 </Link>
               ))}
