@@ -1,5 +1,8 @@
+"use client";
+
 import { GraduationCap, Lightbulb, Users, HandHeart } from "lucide-react";
 import { Button } from "./ui/button";
+import { motion } from "motion/react";
 
 export default function Programs() {
   const programs = [
@@ -40,20 +43,57 @@ export default function Programs() {
   return (
     <section id="work" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <motion.div
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.6, staggerChildren: 0.2 },
+            },
+          }}>
+          <motion.h2
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Our Programs & Initiatives
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-600 max-w-3xl mx-auto">
             We strive to make a difference and to achieve SDG 1, 4 and 5 through
             our wide range of initiatives:
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <motion.div
+          className="grid lg:grid-cols-2 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.25 } },
+          }}>
           {programs.map((program, idx) => (
-            <div
-              key={idx + 1}
+            <motion.div
+              key={idx}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
               <div className="aspect-w-16 aspect-h-9">
                 <img
@@ -83,11 +123,16 @@ export default function Programs() {
                   Learn More
                 </Button>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="mt-16 text-center">
+        <motion.div
+          className="mt-16 text-center"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}>
           <div className="bg-green-700 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">Want to Get Involved?</h3>
             <p className="text-lg mb-6 opacity-90">
@@ -101,12 +146,12 @@ export default function Programs() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white bg-transparent  hover:bg-white hover:text-green-600">
+                className="border-white bg-transparent hover:bg-white hover:text-green-600">
                 Partner With Us
               </Button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
