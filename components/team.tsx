@@ -4,6 +4,9 @@ import Prince from "@/app/assets/images/prince.jpeg";
 import Evans from "@/app/assets/images/evans.jpeg";
 import Tee from "@/app/assets/images/tee.jpeg";
 import Elorm from "@/app/assets/images/elorm.jpeg";
+import FFB from "@/app/assets/images/ffb.jpeg";
+import Chris from "@/app/assets/images/chris.jpeg";
+import BOK from "@/app/assets/images/bok.jpg";
 import Image from "next/image";
 
 export default function Team() {
@@ -16,25 +19,52 @@ export default function Team() {
         "Visionary leader dedicated to empowering students through education and skill development.",
     },
     {
+      name: "Bernard Ohene Amoah",
+      role: "Co-Founder and COO",
+      image: BOK,
+      description:
+        "Operations expert ensuring smooth execution of our programs and initiatives.",
+    },
+    {
       name: "Miss Theodora",
-      role: "Program Coordinator",
+      role: "Secretary",
       image: Tee,
       description:
-        "Experienced educator passionate about creating impactful learning experiences.",
+        "Dedicated administrator ensuring efficient operations and communication.",
     },
     {
       name: "Evans Elabo",
-      role: "Skills Development Lead",
+      role: "Head of IT and Research",
       image: Evans,
       description:
-        "Professional trainer focused on bridging the gap between education and employment.",
+        "Tech-savvy leader driving innovation and research initiatives.",
     },
     {
       name: "Elorm Gabby",
-      role: "Community Outreach Manager",
+      role: "Head of Digital Marketing",
       image: Elorm,
       description:
-        "Community advocate committed to expanding our reach and impact across Ghana.",
+        "Creative marketer focused on enhancing our online presence and engagement.",
+    },
+    {
+      name: "Francis Frimpong Boateng",
+      role: "Programs Coordinator",
+      image: FFB,
+      description: "Ensures the successful implementation of our programs.",
+    },
+    {
+      name: "Christian Dodzi Kwame Dzotepe",
+      role: "Sponsorship Head",
+      image: Chris,
+      description:
+        "Ensures sustainable funding and support for our initiatives.",
+    },
+    {
+      name: "Obed Yawson Ekow",
+      role: "Creative Director",
+      image: BOK,
+      description:
+        "Designs compelling visuals to enhance our brand and communications.",
     },
   ];
 
@@ -85,7 +115,7 @@ export default function Team() {
                 />
                 <div className="absolute inset-0 bg-ngo-green rounded-full opacity-0 group-hover:opacity-10 transition-opacity w-32 h-32 mx-auto"></div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
                 {member.name}
               </h3>
               <p className="text-green-600 font-medium mb-3">{member.role}</p>
