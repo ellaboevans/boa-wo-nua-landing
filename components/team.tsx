@@ -1,34 +1,38 @@
 "use client";
 import { motion } from "motion/react";
+import Prince from "@/app/assets/images/prince.jpeg";
+import Evans from "@/app/assets/images/evans.jpeg";
+import Tee from "@/app/assets/images/tee.jpeg";
+import Elorm from "@/app/assets/images/elorm.jpeg";
+import Image from "next/image";
 
 export default function Team() {
   const teamMembers = [
     {
       name: "Prince Dormenyo",
       role: "Founder & Executive Director",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      image: Prince,
       description:
         "Visionary leader dedicated to empowering students through education and skill development.",
     },
     {
       name: "Miss Theodora",
       role: "Program Coordinator",
-      image:
-        "https://images.unsplash.com/photo-1749700332246-b4fedd192b11?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: Tee,
       description:
         "Experienced educator passionate about creating impactful learning experiences.",
     },
     {
       name: "Evans Elabo",
       role: "Skills Development Lead",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      image: Evans,
       description:
         "Professional trainer focused on bridging the gap between education and employment.",
     },
     {
-      name: "Grace Asante",
+      name: "Elorm Gabby",
       role: "Community Outreach Manager",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+      image: Elorm,
       description:
         "Community advocate committed to expanding our reach and impact across Ghana.",
     },
@@ -72,10 +76,12 @@ export default function Team() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="text-center group">
               <div className="relative mb-6">
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src={member.image}
                   alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow"
+                  className="w-32 h-32 rounded-full mx-auto object-cover object-top shadow-lg group-hover:shadow-xl transition-shadow"
                 />
                 <div className="absolute inset-0 bg-ngo-green rounded-full opacity-0 group-hover:opacity-10 transition-opacity w-32 h-32 mx-auto"></div>
               </div>
