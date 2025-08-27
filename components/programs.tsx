@@ -3,6 +3,10 @@
 import { GraduationCap, Lightbulb, Users, HandHeart } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
+import School from "@/app/assets/images/school.jpeg";
+import Tutorials from "@/app/assets/images/tutorials.jpg";
+import SPSS from "@/app/assets/images/spss.jpg";
+import Image from "next/image";
 
 export default function Programs() {
   const programs = [
@@ -12,7 +16,7 @@ export default function Programs() {
       subtitle: "BOA WO NUA TUTORIALS",
       description:
         "We provide academic support to help students overcome academic challenges through our tutorial sessions which provide academic support to over 1,500 students at KNUST.",
-      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+      image: Tutorials,
     },
     {
       icon: Lightbulb,
@@ -20,12 +24,12 @@ export default function Programs() {
       subtitle: "PROFESSIONAL TRAINING",
       description:
         "We provide and train individuals to acquire essential skills that align with today's dynamic job market, boost their employability, and help reduce poverty.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+      image: SPSS,
     },
     {
       icon: Users,
       title: "EmpowerHer Initiative",
-      subtitle: "FEMALE EMPOWERMENT",
+      subtitle: "WOMEN EMPOWERMENT",
       description:
         "An empowerment initiative dedicated to nurturing the next generation of female leaders through mentorship, skill development and education.",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
@@ -36,7 +40,7 @@ export default function Programs() {
       subtitle: "GIVING BACK",
       description:
         "Our Community Outreach aims to create a more educated, skilled, and empowered generation through volunteering and mentorship programs.",
-      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a",
+      image: School,
     },
   ];
 
@@ -96,7 +100,9 @@ export default function Programs() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
               <div className="aspect-w-16 aspect-h-9">
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src={program.image}
                   alt={program.title}
                   className="w-full h-48 object-cover"
