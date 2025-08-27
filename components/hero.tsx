@@ -3,6 +3,8 @@ import React from "react";
 import { Button } from "./ui/button";
 import { ArrowRight, Award, BookOpen, Users } from "lucide-react";
 import { motion } from "motion/react";
+import GroupImage from "@/app/assets/images/group-image.jpg";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -62,8 +64,8 @@ export default function Hero() {
           </motion.div>
 
           <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a"
+            <Image
+              src={GroupImage}
               alt="Students learning together"
               className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
             />

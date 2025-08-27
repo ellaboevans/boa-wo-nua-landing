@@ -2,6 +2,8 @@
 
 import { Eye, Heart, Target } from "lucide-react";
 import { motion } from "motion/react";
+import Instructor from "@/app/assets/images/instructor.jpg";
+import Image from "next/image";
 
 export default function About() {
   const data = [
@@ -98,8 +100,8 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.3 }}>
-            <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+            <Image
+              src={Instructor}
               alt="Students in classroom"
               className="rounded-2xl shadow-lg w-full h-[400px] object-cover"
             />
