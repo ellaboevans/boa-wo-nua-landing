@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import School from "@/app/assets/images/school.jpeg";
 import Tutorials from "@/app/assets/images/tutorials.jpg";
 import SPSS from "@/app/assets/images/spss.jpg";
+import Flyer from "@/app/assets/images/flyer.jpeg";
 import Image from "next/image";
 
 export default function Programs() {
@@ -32,7 +33,7 @@ export default function Programs() {
       subtitle: "WOMEN EMPOWERMENT",
       description:
         "An empowerment initiative dedicated to nurturing the next generation of female leaders through mentorship, skill development and education.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+      image: Flyer,
     },
     {
       icon: HandHeart,
@@ -99,13 +100,13 @@ export default function Programs() {
               }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="aspect-w-16 aspect-h-9">
+              <div className="h-[15.5rem] ">
                 <Image
                   width={500}
-                  height={500}
+                  height={2000}
                   src={program.image}
                   alt={program.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="p-8">
