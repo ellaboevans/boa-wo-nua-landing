@@ -7,6 +7,7 @@ import Elorm from "@/app/assets/images/elorm.jpeg";
 import FFB from "@/app/assets/images/ffb.jpeg";
 import Chris from "@/app/assets/images/chris.jpeg";
 import BOK from "@/app/assets/images/bok.jpg";
+import Belinda from "@/app/assets/images/bella.jpg";
 import Image from "next/image";
 
 export default function Team() {
@@ -59,12 +60,19 @@ export default function Team() {
       description:
         "Ensures sustainable funding and support for our initiatives.",
     },
+    // {
+    //   name: "Obed Yawson Ekow",
+    //   role: "Creative Director",
+    //   image: BOK,
+    //   description:
+    //     "Designs compelling visuals to enhance our brand and communications.",
+    // },
     {
-      name: "Obed Yawson Ekow",
-      role: "Creative Director",
-      image: BOK,
+      name: "Belinda Nketia",
+      role: "Media Relations",
+      image: Belinda,
       description:
-        "Designs compelling visuals to enhance our brand and communications.",
+        "Manages media outreach and communications to enhance our visibility.",
     },
   ];
 
