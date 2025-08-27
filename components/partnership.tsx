@@ -48,7 +48,9 @@ export default function Partnership() {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.5 }}>
-        <h2 className="font-bold uppercase" id="trusted-by-heading">
+        <h2
+          className="font-bold text-3xl md:text-4xl capitalize"
+          id="trusted-by-heading">
           Our Partners
         </h2>
       </motion.section>
@@ -63,7 +65,7 @@ export default function Partnership() {
           aria-label="Trusted partners and institutions">
           {trustedPartners.map((partner, index) => (
             <motion.div
-              key={partner.alt} 
+              key={partner.alt}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={
                 isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
