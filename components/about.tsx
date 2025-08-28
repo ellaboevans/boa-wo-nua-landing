@@ -56,8 +56,8 @@ export default function About() {
             }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Founded on the principle of empowering tomorrow's leaders, we are
-            dedicated to creating positive change through education, skill
+            Founded on the principle of empowering tomorrow&apos;s leaders, we
+            are dedicated to creating positive change through education, skill
             development, and community engagement.
           </motion.p>
         </motion.div>
@@ -119,7 +119,7 @@ export default function About() {
           }}>
           {data.map(({ Icon, title, text }, i) => (
             <motion.div
-              key={i}
+              key={i + 1}
               variants={{
                 hidden: { opacity: 0, y: 40 },
                 visible: { opacity: 1, y: 0 },
