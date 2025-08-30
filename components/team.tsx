@@ -8,6 +8,7 @@ import FFB from "@/app/assets/images/ffb.jpeg";
 import Chris from "@/app/assets/images/chris.jpeg";
 import BOK from "@/app/assets/images/bok.jpg";
 import Belinda from "@/app/assets/images/bella.jpg";
+import Somenu from "@/app/assets/images/somenu.jpeg";
 import Image from "next/image";
 
 export default function Team() {
@@ -20,14 +21,14 @@ export default function Team() {
         "Visionary leader dedicated to empowering students through education and skill development.",
     },
     {
-      name: "Bernard Ohene Amoah",
+      name: "Bernard Ohene Kofi Amoah",
       role: "Co-Founder and COO",
       image: BOK,
       description:
         "Operations expert ensuring smooth execution of our programs and initiatives.",
     },
     {
-      name: "Miss Theodora",
+      name: "Theodora Debrah",
       role: "Secretary",
       image: Tee,
       description:
@@ -73,6 +74,13 @@ export default function Team() {
       image: Belinda,
       description:
         "Manages media outreach and communications to enhance our visibility.",
+    },
+    {
+      name: "Somenu David",
+      role: "Financial Secretary",
+      image: Somenu,
+      description:
+        "Oversees financial planning and management to ensure sustainability.",
     },
   ];
 

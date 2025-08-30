@@ -10,12 +10,12 @@ export default function Contact() {
     {
       icon: <Phone className="h-6 w-6 text-green-600" />,
       label: "Phone",
-      value: "+233543361975 / +233524417913",
+      value: "+233542862973 / +233504417913",
     },
     {
       icon: <Mail className="h-6 w-6 text-green-600" />,
       label: "Email",
-      value: "boawonua@gmail.com",
+      value: "boawonuaa@gmail.com",
     },
     {
       icon: <MapPin className="h-6 w-6 text-green-600" />,
